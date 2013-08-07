@@ -3,11 +3,12 @@ get '/' do
 end
 
 post '/urls' do
-  @url = Url.create(params[:origin_url])
-  
+  @url = Url.create(origin_url: params[:origin_url])
+  erb :shortened_url
 end
 
 # e.g., /q6bda
 get '/:short_url' do
-  # redirect to appropriate "long" URL
+  u = Url.find_by_short_url(params[:short_url])
+  redirect u.origin_url
 end

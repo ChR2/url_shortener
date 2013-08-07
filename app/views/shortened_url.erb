@@ -1,0 +1,10 @@
+ 
+ <div class ="container">
+  <h1>Short.li</h1>
+
+  <p>This is your shortened url:</p>
+<br>
+  <% if @url %>
+    <p><a href="<%=@url.short_url%>">http://www.short.li/<%= @url.short_url %></a></p>
+  <% end %>
+</div>

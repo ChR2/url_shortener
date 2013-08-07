@@ -4,5 +4,5 @@
   <p>Please provide a url:</p>
 <br>
 <form action="/urls" method="post">
-  <input id="URL" name="url[:origin_url]" type="text" value="<%= @url.try(:origin_url) %>">
+  <input id="URL" name="origin_url" type="text" value="<%= @url.try(:origin_url) %>">
 </div>
