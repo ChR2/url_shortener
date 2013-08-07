@@ -4,7 +4,5 @@
 
   <p>This is your shortened url:</p>
 <br>
-  <% if @url %>
-    <p><a href="<%=@url.short_url%>">http://www.short.li/<%= @url.short_url %></a></p>
-  <% end %>
+    <p><a href="/urls/<%=@url.short_url%>">http://www.short.li/<%= @url.short_url %></a></p>
 </div>

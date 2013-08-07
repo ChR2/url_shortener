@@ -1,5 +1,6 @@
 class Url < ActiveRecord::Base
   belongs_to :user
+
   before_save :shortener
   validates_presence_of :origin_url
   validates_format_of :origin_url, :with => URI::regexp(%w(http https))
